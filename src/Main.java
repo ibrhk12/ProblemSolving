@@ -12,5 +12,7 @@ public class Main {
         };
         int[] points = new int[]{ 3, 5, 11, 12};
         System.out.println(Arrays.toString(swpl.numOfLamps(ranges,points)));
+        SweepingLineFaster swplf = new SweepingLineFaster();
+        System.out.println(Arrays.toString(swplf.numOfLamps(ranges, points)));
     }
 }
