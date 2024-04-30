@@ -3,16 +3,9 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        SweepLinesNumberOfLamps swpl = new SweepLinesNumberOfLamps();
-        int[][] ranges = new int[][]{
-                {1,3},
-                {3,5},
-                {4,9},
-                {5,11}
-        };
-        int[] points = new int[]{ 3, 5, 11, 12};
-        System.out.println(Arrays.toString(swpl.numOfLamps(ranges,points)));
-        SweepingLineFaster swplf = new SweepingLineFaster();
-        System.out.println(Arrays.toString(swplf.numOfLamps(ranges, points)));
+       PatternMatching pm = new PatternMatching();
+       int[] input = new int[] { 4, 1 ,3, 4, 4, 5, 5, 1};
+       int[] pattern = new int[] {1, 0, -1};
+       System.out.println(pm.countMatching(input, pattern));
     }
 }
