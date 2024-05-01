@@ -1,11 +1,11 @@
 import java.lang.reflect.Array;
+import java.text.ParseException;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-       PatternMatching pm = new PatternMatching();
-       int[] input = new int[] { 5, 5, 3, 7, 7, 8, 8, 3, 5, 5, 1};
-       int[] pattern = new int[] {1, 0, -1};
-       System.out.println(pm.countMatching(input, pattern));
+    public static void main(String[] args) throws ParseException {
+       DateTimeDiff dtf = new DateTimeDiff();
+       System.out.println(dtf.StringChallenge("12:00am-12:00am"));
+       System.out.println(dtf.StringChallenge("12:30am-12:00am"));
     }
 }
