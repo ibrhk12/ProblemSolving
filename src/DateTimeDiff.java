@@ -22,9 +22,7 @@ class DateTimeDiff {
                 || times[1].contains("pm") && times[0].contains("pm")) {
             int hour1 = date1.getHours();
             int hour2 = date2.getHours();
-            int minute1 = date1.getMinutes();
-            int minute2 = date2.getMinutes();
-            if (hour1 == hour2 && (minute1 >= minute2)) {
+            if (hour1 >= hour2) {
                 Calendar c = Calendar.getInstance();
                 c.setTime(date2);
                 c.add(Calendar.DATE, 1);
