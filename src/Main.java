@@ -6,34 +6,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        SynonymousSentences ss = new SynonymousSentences();
-        List<List<String>> synonymous1 = Arrays.asList(
-              Arrays.asList("happy", "joy"),
-              Arrays.asList("cheerful","smile"),
-              Arrays.asList("fascinated", "joy"),
-              Arrays.asList("delighted", "smile"),
-              Arrays.asList("happy", "smile"),
-              Arrays.asList("sad", "depressed"),
-              Arrays.asList("depressed", "unhappy")
-        );
-        List<List<String>> synonymous2 = Arrays.asList(
-                Arrays.asList("a", "QrbCl")
-        );
-        String text1 = "I feel happy today but yesterday I was sad the day before I was happy";
-        String text2 = "d QrbCl ya ya NjZQ";
-        List<List<String>> synonymous3 = Arrays.asList(
-                Arrays.asList("v", "yr")
-        );
-        String text3 = "v v v v yZ";
-        List<List<String>> synonymous4 = Arrays.asList(
-                Arrays.asList("a", "b"),
-                Arrays.asList("b", "c"),
-                Arrays.asList("d", "e"),
-                Arrays.asList("c", "d")
-        );
-        String text4 = "a b";
-        List<String> result = ss.generateSentences(synonymous3, text3);
-        for(String it : result)
-            System.out.println(it);
+        MaximumPointsInSquare mxpsq = new MaximumPointsInSquare();
+        int[][] points = new int[][] {{2,2},{-1,-2},{-4,4},{-3,1},{3,-3}};
+        String s = "abdca";
+        String s1 = "ffcbea";
+        int[][] points1 = new int[][] {{-35,-3},{17,28},{28,-28},{25,-1},{26,-16},{1,-21}};
+        int[][] points2 = new int[][] {{1,1},{-1,-1},{2,-2}};
+        String s2 = "ccd";
+        System.out.println(mxpsq.maxPointsInsideSquare(points2,s2));
+
     }
 }
