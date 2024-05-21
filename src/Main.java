@@ -6,9 +6,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        MSSBinarySearchPreifxSum mss = new MSSBinarySearchPreifxSum();
-        int[] nums1 = new int[]{2,3,1,2,4,3};
-        int target1 = 7;
-        System.out.println(mss.minSubArrayLen(target1, nums1));
+        ValidPalindrome vp = new ValidPalindrome();
+        System.out.println(vp.isPalindrome("A man, a plan, a canal: Panama"));
     }
 }
