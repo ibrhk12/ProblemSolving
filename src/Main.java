@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-      NextGreaterElementII ngeii = new NextGreaterElementII();
-      ngeii.nextGreaterElements(new int[]{1,2,3,4,3});
-
+        NextGreaterElementIISorting ngeiis = new NextGreaterElementIISorting();
+        String answer = Arrays.toString(ngeiis.nextGreaterElements(new int []{1,2,3,4,3}));
+        System.out.println(answer);
     }
 }
