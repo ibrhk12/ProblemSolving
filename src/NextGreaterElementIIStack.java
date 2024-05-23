@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class NextGreaterElementIISorting {
+public class NextGreaterElementIIStack {
     public int[] nextGreaterElements(int[] nums) {
         int[] result = new int[nums.length];
         Stack<Integer> monotonicStack = new Stack<>();
