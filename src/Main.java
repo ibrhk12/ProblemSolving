@@ -6,7 +6,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        ValidPalindrome vp = new ValidPalindrome();
-        System.out.println(vp.isPalindrome("A man, a plan, a canal: Panama"));
+      NextGreaterElementII ngeii = new NextGreaterElementII();
+      ngeii.nextGreaterElements(new int[]{1,2,3,4,3});
+
     }
 }
