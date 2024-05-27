@@ -3,8 +3,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        NextGreaterElementIIStack ngeiis = new NextGreaterElementIIStack();
-        String answer = Arrays.toString(ngeiis.nextGreaterElements(new int []{1,2,3,4,3}));
-        System.out.println(answer);
+        DailyTempraturesArray dta = new DailyTempraturesArray();
+        System.out.println(Arrays.toString(dta.dailyTemperatures(new int[] {45, 43, 45, 43, 45, 31, 32, 33, 50})));
     }
 }
