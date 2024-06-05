@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class MeetinRoomsIISweepingLine {
+public class MeetingRoomsIISweepingLine {
     public int minMeetingRooms(int[][] intervals) {
         int result = 0;
         PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
