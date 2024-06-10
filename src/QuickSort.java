@@ -9,7 +9,7 @@ public class QuickSort {
     }
     private int divideB(int[] arr, int l, int r){
         Random rnd = new Random();
-        int pivot = rnd.nextInt(r - l + 1) + l;
+        int pivot = rnd.nextInt(r - l) + l;
         swap(arr, pivot, r);
         pivot = r;
         int i = l - 1;
@@ -43,8 +43,8 @@ public class QuickSort {
     }
     public void quickSort(int[] arr, int l, int r){
         if(l >= r) return;
-        int pivot = divide(arr, l, r);
-        quickSort(arr, l, pivot);
+        int pivot = divideB(arr, l, r);
+        quickSort(arr, l, pivot - 1);
         quickSort(arr, pivot + 1, r);
     }
 }
