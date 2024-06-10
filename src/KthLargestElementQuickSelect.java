@@ -18,7 +18,6 @@ public class KthLargestElementQuickSelect {
                 i++;
             }
         }
-        i++;
         swap(nums, i, r);
         return i;
     }
