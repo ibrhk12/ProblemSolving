@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        KthLargestElementQuickSelect kleqs = new KthLargestElementQuickSelect();
-        System.out.println(kleqs.findKthLargest(new int[]{1}, 1));
+        KthLargestElementQSNonTLE keqs = new KthLargestElementQSNonTLE();
+        System.out.println(keqs.findKthLargest(new int[]{1}, 1));
     }
 }
