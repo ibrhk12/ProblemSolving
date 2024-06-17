@@ -3,8 +3,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        KCLosestPointsToOriginBinarySearch kcbs = new KCLosestPointsToOriginBinarySearch();
-        for(int[] r : kcbs.kClosest(new int[][] {{0, 1}, {1, 0}}, 2))
+        KClosesPointsToOriginBinarySearchFaster kcbs = new KClosesPointsToOriginBinarySearchFaster();
+        for(int[] r : kcbs.kClosest(new int[][] {{-5, 4}, {-6, -5}, {4, 6}}, 2))
             System.out.print(Arrays.toString(r));
         System.out.println();
     }
