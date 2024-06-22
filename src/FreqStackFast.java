@@ -16,8 +16,10 @@ public class FreqStackFast {
     }
 
     public int pop() {
-        if(group.get(maxFreq).isEmpty())
+        if(group.get(maxFreq).isEmpty()) {
+            group.remove(maxFreq);
             maxFreq --;
+        }
         int val = group.get(maxFreq).pop();
         freq.merge(val, -1, Integer::sum);
         return val;
