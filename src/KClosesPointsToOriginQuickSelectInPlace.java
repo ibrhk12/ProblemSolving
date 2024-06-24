@@ -33,9 +33,9 @@ public class KClosesPointsToOriginQuickSelectInPlace {
         while(pivotIndex != k){
             pivotIndex = partition(points, left, right);
             if(pivotIndex > k)
-                right = pivotIndex;
+                right = pivotIndex - 1;
             else
-                left = pivotIndex + 1;
+                left = pivotIndex;
         }
         return Arrays.copyOf(points, k);
     }
