@@ -1,6 +1,7 @@
 import java.util.Random;
 
 //TLE Solution
+//modified to non TLE solution
 public class KthLargestElementQuickSelect {
     private void swap(int[] nums, int a, int b){
         int temp = nums[a];
@@ -11,9 +12,10 @@ public class KthLargestElementQuickSelect {
         int i = l;
         Random rnd = new Random();
         int pivotIndex = rnd.nextInt(r - l + 1) + l;
+        int pivot = nums[pivotIndex];
         swap(nums, pivotIndex, r);
         for(int j = l; j < r; j++){
-            if(nums[j] <= nums[r]){
+            if(nums[j] < pivot){
                 swap(nums, i, j);
                 i++;
             }
@@ -22,8 +24,9 @@ public class KthLargestElementQuickSelect {
         return i;
     }
     private int QuickSelect(int[] nums, int k, int l, int r){
-        while(l <= r){
-            int partition = partition(nums,l, r);
+        int partition = nums.length - 1;
+        while( l <= r){
+            partition = partition(nums,l, r);
             if(k == partition)
                 return nums[partition];
             else if(k < partition)
@@ -31,7 +34,7 @@ public class KthLargestElementQuickSelect {
             else
                 l = partition + 1;
         }
-        return -1;
+        return nums[partition];
     }
     public int findKthLargest(int[] nums, int k) {
         k = nums.length - k;
