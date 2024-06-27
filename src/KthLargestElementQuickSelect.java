@@ -34,7 +34,7 @@ public class KthLargestElementQuickSelect {
             else
                 l = partition + 1;
         }
-        return -1;
+        return nums[partition];
     }
     public int findKthLargest(int[] nums, int k) {
         k = nums.length - k;
