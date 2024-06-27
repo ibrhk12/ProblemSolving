@@ -8,8 +8,12 @@ public class Main {
             System.out.print(Arrays.toString(r));
         System.out.println();
         */
-        QuickSelect qs = new QuickSelect();
-        System.out.println(Arrays.toString(qs.findKthElement(new int[]{8, 8, 8, 8, 8, 8, 2}, 1)));
+        //QuickSelect qs = new QuickSelect();
+        //System.out.println(qs.findKthElement(new int[]{2, 1}, 2));
 
+        //FindKthLargesHoareQuickSelect fkle = new FindKthLargesHoareQuickSelect();
+        //System.out.println(fkle.findKthLargest(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4));
+        TopKFrequentElementsTreeMap tkfe = new TopKFrequentElementsTreeMap();
+        System.out.println(Arrays.toString(tkfe.topKFrequent(new int[]{1,2}, 2)));
     }
 }

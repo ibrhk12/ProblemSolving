@@ -28,20 +28,22 @@ public class QuickSelect {
         swap(left, j, points);
         return j;
     }
-    private int[] quickSelect(int[] points, int k){
+    private int quickSelect(int[] points, int k){
         int pivotIndex = points.length;
         int left = 0, right = points.length - 1;
-        while(k != pivotIndex){
+        while(left < right){
             pivotIndex = partition(points, left, right);
-            if(pivotIndex > k)
-                right = pivotIndex;
+            if(pivotIndex > k - 1)
+                right = pivotIndex - 1;
+            else if(pivotIndex < k - 1)
+                left = pivotIndex;
             else
-                left = pivotIndex + 1;
+                return points[pivotIndex];
         }
-        return Arrays.copyOf(points, k);
+        return -1;
     }
-    public int[] findKthElement(int[] points, int k){
-        int[] result = quickSelect(points, k);
+    public int findKthElement(int[] points, int k){
+        int result = quickSelect(points, k);
         return result;
     }
 }

@@ -28,14 +28,29 @@ public class KClosesPointsToOriginQuickSelectInPlace {
         swap(j, left, points);
         return j;
     }
+    private int partitionB(int[][] points, int left, int right){
+        int pivotIndex = new Random().nextInt(right - left + 1) + left;
+        int pivot = distance(points[pivotIndex]);
+        while(left < right){
+            if(distance(points[left]) < pivot)
+                left ++;
+            else{
+                swap(left, right, points);
+                right --;
+            }
+        }
+        if(distance(points[left]) < pivot)
+            left++;
+        return left;
+    }
     private int[][] quickSelect(int[][] points, int k, int left, int right){
         int pivotIndex = points.length;
         while(pivotIndex != k){
             pivotIndex = partition(points, left, right);
             if(pivotIndex > k)
-                right = pivotIndex;
+                right = pivotIndex - 1;
             else
-                left = pivotIndex + 1;
+                left = pivotIndex;
         }
         return Arrays.copyOf(points, k);
     }
