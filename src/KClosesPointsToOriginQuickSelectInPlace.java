@@ -43,10 +43,24 @@ public class KClosesPointsToOriginQuickSelectInPlace {
             left++;
         return left;
     }
+    private int partitionC(int[][] points, int left, int right){
+        int i = left;
+        int pivotIndex = new Random().nextInt(right - left + 1) + left;
+        int pivotDistance = distance(points[pivotIndex]);
+        swap(pivotIndex, right, points);
+        for(int j = left; j < right; j++){
+            if(distance(points[j]) < pivotDistance){
+                swap(i, j, points);
+                i++;
+            }
+        }
+        swap(i, right, points);
+        return i;
+    }
     private int[][] quickSelect(int[][] points, int k, int left, int right){
         int pivotIndex = points.length;
         while(pivotIndex != k){
-            pivotIndex = partition(points, left, right);
+            pivotIndex = partitionC(points, left, right);
             if(pivotIndex > k)
                 right = pivotIndex - 1;
             else
