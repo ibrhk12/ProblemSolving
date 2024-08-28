@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ReoragizeStringLinear {
+public class ReorganizeStringLinear {
     public String reorganizeString(String s) {
         char[] answer = new char[s.length()];
         Map<Character, Integer> map = new HashMap<>();
@@ -13,7 +13,7 @@ public class ReoragizeStringLinear {
                 max = it.getValue();
                 maxItem = new AbstractMap.SimpleEntry<>(it.getKey(), it.getValue());
             }
-        if(maxItem.getValue() > s.length() / 2)
+        if(maxItem.getValue() > s.length() - 1 / 2)
             return "";
         int count = 0;
         int begin = 0;
@@ -23,7 +23,7 @@ public class ReoragizeStringLinear {
                 begin = end;
             int i = begin;
             int chars = 0;
-            while( chars < it.getValue()){
+            while(i < s.length() && chars < it.getValue()){
                 answer[i] = it.getKey();
                 chars ++;
                 i += 2;
@@ -32,6 +32,11 @@ public class ReoragizeStringLinear {
             begin ++;
             count ++;
         }
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for(char c : answer){
+            if(c != '\0')
+                sb.append(c);
+        }
+        return (sb.toString().length() == s.length())? sb.toString(): "";
     }
 }

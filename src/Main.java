@@ -8,8 +8,8 @@ public class Main {
             System.out.print(Arrays.toString(r));
         System.out.println();
         */
-        ReorganizeString rs = new ReorganizeString();
-        System.out.println(rs.reorganizeString("aaaaabbcccc"));
+        ReorganizeStringLinear rs = new ReorganizeStringLinear();
+        System.out.println(rs.reorganizeString("bfrbs"));
         //QuickSelect qs = new QuickSelect();
         //System.out.println(qs.findKthElement(new int[]{2, 1}, 2));
 
